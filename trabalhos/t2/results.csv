@@ -1,5 +1,6 @@
-tool,nthreads,size,repetitions,usec
-Pthreads,1,1000000,2000,5227948
-Pthreads,2,500000,2000,2580534
-OpenMP,1,1000000,2000,5227948
-OpenMP,2,500000,2000,2580534
+| tool     | nthreads | size    | repetitions | usec    | 
+|----------|----------|---------|-------------|---------| 
+| Pthreads | 1        | 1000000 | 2000        | 6809935 | 
+| Pthreads | 2        | 500000  | 2000        | 3528764 | 
+| OpenMP   |          |         |             |         | 
+| OpenMP   |          |         |             |         | 

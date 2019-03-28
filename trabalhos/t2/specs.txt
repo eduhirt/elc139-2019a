@@ -1,0 +1,4 @@
+PC: ASUS X555UB
+Sistema Operacional: ElementaryOS
+Processador: Intel i5-6200U (2 Cores e 4 Threads - 2.3GHz ate 2.8GHz)
+Memoria: 8GB
