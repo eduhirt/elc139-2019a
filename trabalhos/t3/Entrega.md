@@ -5,7 +5,7 @@ Nome: Eduardo Rafael Hirt
 
 Implementaço: [OpenMPDemoABC](OpenMPDemoABC.cpp)
 
-###Resultados:
+## Resultados:
 
 
 **Dynamic com Chunk:**<br/>
