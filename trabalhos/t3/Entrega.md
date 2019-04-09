@@ -53,5 +53,6 @@ AADCBADCBADCBADCB---<br/>
 A=5 B=4 C=4 <br/>
 
 
-
-
+## Referências:
+- Jaka's Corner, [OpenMP: For & Scheduling](http://jakascorner.com/blog/2016/06/omp-for-scheduling.html)
+- Blaise Barney, [OpenMP](https://computing.llnl.gov/tutorials/openMP/)
