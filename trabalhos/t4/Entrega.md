@@ -1,0 +1,5 @@
+# T4: Geração de Fractais de Mandelbrot em OpenMP
+
+**Nome:** Eduardo Rafael Hirt
+
+**Códigos**: [fractalpar1.cpp](/trabalhos/t4/fractalParallel/fractalpar1.cpp) e [fractalpar2.cpp](/trabalhos/t4/fractalParallel/fractalpar2.cpp)
