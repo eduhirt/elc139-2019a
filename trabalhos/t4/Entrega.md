@@ -1,6 +1,6 @@
-# ELC139-2019a - Programação Paralela 
+# T4: Geração de Fractais de Mandelbrot em OpenMP
 
-### T4: Geração de Fractais de Mandelbrot em OpenMP
+### ELC139-2019a - Programação Paralela
 
 **Nome:** Eduardo Rafael Hirt
 
