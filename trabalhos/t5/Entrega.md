@@ -2,7 +2,7 @@
 
 ### ELC139-2019a - Programação Paralela
 
-**Nome:** Eduardo Rafael Hirt
+**Nome:** Eduardo Rafael Hirt <br/>
 **Matrícula:** 201411329
 
 # Parte 1
@@ -16,5 +16,5 @@ Implementação de um programa MPI que transporte uma mensagem em um pipeline fo
 
 # Parte 3: Correções
 
-[mpi_corrigido1.c](mpi_corrigido1.c): Valor das tags era igualado ao rank, o que gerava valores diferentes <br/>
+[mpi_corrigido1.c](mpi_corrigido1.c): Valor das tags era igualado ao rank, o que gerava valores diferentes. <br/>
 [mpi_corrigido2.c](mpi_corrigido2.c): Faltava o MPI_Finalize() no final do código.
