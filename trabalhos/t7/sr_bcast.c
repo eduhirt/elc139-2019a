@@ -32,6 +32,7 @@ int main(int argc, char** argv) {
   int myrank;    // "rank" do processo
   int p;         // numero de processos
   int root;      // rank do processo root
+  double tempo_inicial, tempo_final;
 
   // MPI_Init deve ser invocado antes de qualquer outra chamada MPI
   MPI_Init(&argc, &argv);
@@ -45,6 +46,7 @@ int main(int argc, char** argv) {
 
   if (myrank == root) {
     data = 100;  // atribui um valor para ser enviado
+    tempo_inicial = MPI_Wtime();
     printf("Processo %d (root) realizando broadcast do dado %d\n", root, data);
     sr_bcast(&data, 1, MPI_INT, root, MPI_COMM_WORLD);
   } else {
@@ -53,5 +55,13 @@ int main(int argc, char** argv) {
   }
 
   MPI_Finalize();
+
+  if (myrank == root) {
+    tempo_final = MPI_Wtime();
+    printf("\n-----------------------------------------------\n");
+    printf("Tempo: %f microssegundos", (tempo_final-tempo_inicial)*1000000);
+    printf("\n-----------------------------------------------\n");
+  }
+
   return 0;
 }
