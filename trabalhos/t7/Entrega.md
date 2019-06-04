@@ -14,7 +14,7 @@ Implementação com broadcast: [parte_bcast.c](sr_bcast.c) do programa
 
 
 <img src="./graficos/Send_Receive.svg" width="500">
-<img src="./graficos/Broadcast.svg" width="500">
+<img src="./graficos/Broadcast .svg" width="500">
 
 
 </br>
@@ -24,5 +24,5 @@ Implementação com broadcast: [parte_bcast.c](sr_bcast.c) do programa
 Programa: [avg.c](avg.c)
 
 
-<img src="./graficos/lat.png" width="500">
-<img src="./graficos/bw.png" width="500">
+<img src="./graficos/lat.svg" width="500">
+<img src="./graficos/bw.svg" width="500">
