@@ -9,7 +9,7 @@
 
 - Implementação com send/receive: [sr_bcast.c](sr_bcast.c).
 
-- Implementação com broadcast: [parte_bcast.c](parte1_bcast.c)
+- Implementação com broadcast: [parte1_bcast.c](parte1_bcast.c)
 
 Foi utilizada uma variação de **2 a 32 processos** e uma velocidade de execução de **45 GFlops**. Com isso, foram obtidos os resultados abaixo:
 
