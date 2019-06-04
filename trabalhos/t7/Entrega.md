@@ -26,5 +26,5 @@ Aqui foram utilizados **45 GFlops** como velocidade de execução e **3 tamanhos
 Variando a propriedade **lat** do arquivo [cluster_crossbar.xml](cluster_crossbar.xml) entre 5us e 10us os seguintes resultados foram obtidos:
 <img src="./graficos/lat.svg" width="500">
 
-Agora, variando a propriedade **dw** do mesmo arquivo entre 125Mbps e 500Mbps, temos:
+Agora, variando a propriedade **bw** do mesmo arquivo entre 125Mbps e 500Mbps, temos:
 <img src="./graficos/bw.svg" width="500">
