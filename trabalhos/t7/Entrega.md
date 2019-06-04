@@ -20,7 +20,7 @@ Foi utilizada uma variação de **2 a 32 processos** e uma velocidade de execuç
 
 Programa: [avg.c](avg.c)
 
-Aqui,foi utilizado **45 GFlops** como velocidade de execução e **3 tamanhos diferentes de vetores** em cada execução (500, 1000 e 2000).
+Aqui foram utilizados **45 GFlops** como velocidade de execução e **3 tamanhos diferentes de vetores** em cada execução (500, 1000 e 2000).
 
 Variando a propriedade **lat** do arquivo [cluster_crossbar.xml](cluster_crossbar.xml) entre 5us e 10us os seguintes resultados foram obtidos:
 <img src="./graficos/lat.svg" width="500">
