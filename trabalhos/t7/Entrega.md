@@ -7,9 +7,9 @@
 
 # Parte 1
 
-Implementação com send/receive: [sr_bcast.c](sr_meu_bcast.c).
+- Implementação com send/receive: [sr_bcast.c](sr_meu_bcast.c).
 
-Implementação com broadcast: [parte_bcast.c](sr_bcast.c)
+- Implementação com broadcast: [parte_bcast.c](sr_bcast.c)
 
 Foi utilizada uma variação de **2 a 32 processos** e uma velocidade de execução de **45 GFlops**. Com isso, foram obtidos os resultados abaixo:
 
@@ -19,7 +19,7 @@ Foi utilizada uma variação de **2 a 32 processos** e uma velocidade de execuç
 
 # Parte 2
 
-Programa: [avg.c](avg.c)
+- Programa: [avg.c](avg.c)
 
 Aqui foram utilizados **45 GFlops** como velocidade de execução e **3 tamanhos diferentes de vetores** em cada execução (500, 1000 e 2000).
 
