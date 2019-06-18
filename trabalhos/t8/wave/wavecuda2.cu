@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     cudaMallocManaged(&pic, frames * width * width * sizeof(char));
 
-    int blockSize = 256;
+    int blockSize = 512;
     int numBlocks = (width + blockSize - 1) / blockSize;
 
     calcularFrame<<<numBlocks,blockSize>>>(pic,width,frames);

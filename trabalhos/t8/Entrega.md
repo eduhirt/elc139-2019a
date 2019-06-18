@@ -69,9 +69,9 @@ Na segunda parte, foi utilizada a estratégia de blocos (baseada no [exemplo](ht
 | 1024          | 32            | 1.6643 s      | 0.8002 s      | 0.8384 s      |
 | 1024          | 64            | 3.2539 s      | 0.8233 s      | 0.8586 s      |
 | 1024          | 128           | 6.6157 s      | 0.8214 s      | 0.8588 s      |
-| 1024          | 32            | 6.5379 s      | 2.2104 s      | 2.2786 s      |
-| 1024          | 64            | 12.9149 s     | 2.2477 s      | 2.3266 s      |
-| 1024          | 128           | 26.0005 s     | 2.2558 s      | 2.3727 s      |
+| 2048          | 32            | 6.5379 s      | 2.2104 s      | 2.2786 s      |
+| 2048          | 64            | 12.9149 s     | 2.2477 s      | 2.3266 s      |
+| 2048          | 128           | 26.0005 s     | 2.2558 s      | 2.3727 s      |
 
 O tempo de execução aumentou se comparado ao Wavecuda1, imagino que seja pelo fato de o wavecuda1 ser mais paralelizado que o 2, que agrupa mais processamento em cada kernel.
 
