@@ -41,6 +41,7 @@ Após isso, ambos os códigos, [wavecuda1.cu](/wave/wavecuda1.cu) e [wave.cpp](/
 Para conseguir observar melhor, executei com variações de ambos os parâmetros (frame_width e num_frames). Assim, conseguimos ver que o código paralelizado em GPU é muito mais rápido que o código sequencial executado em um processador.
 
 **WAVE**
+
 | frame_width 	| num_frames 	| Tempo de execução 	|
 |-------------	|------------	|-------------------	|
 | 512         	| 32         	| 0.4635 s          	|
@@ -55,6 +56,7 @@ Para conseguir observar melhor, executei com variações de ambos os parâmetros
 
 
 **WAVECUDA1**
+
 | frame_width 	| num_frames 	| Tempo de execução 	|
 |-------------	|------------	|-------------------	|
 | 512         	| 32         	| 0.4341 s          	|
