@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 
      // allocate picture array
     unsigned char* pic;
-    int blockSize, numBlocks;
 
     // start time
     timeval start, end;
@@ -42,11 +41,7 @@ int main(int argc, char *argv[])
 
     cudaMallocManaged(&pic, frames * width * width * sizeof(char));
 
-    blockSize = 256;
-    numBlocks = (N + blockSize - 1) / blockSize;
-    calcularFrame<<<numBlocks, blockSize>>>(pic, width);
-
-    cudaDeviceSynchronize();
+    calcularFrame<<<1,frames>>>(pic,width);
 
     // verify result by writing frames to BMP files
     if ((width <= 256) && (frames <= 100)) {

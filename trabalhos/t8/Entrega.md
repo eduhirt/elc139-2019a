@@ -5,7 +5,7 @@
 **Nome:** Eduardo Rafael Hirt <br/>
 **Matrícula:** 201411329
 
-Implementações: [wavecuda1.cu](wave/wavecuda1.cu), [wavecuda2.cu](wave/wavecuda2.cu)
+Implementações: [wavecuda1.cu](wave/wavecuda1.cu)
 
 # Parte 1
 
