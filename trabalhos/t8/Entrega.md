@@ -9,7 +9,7 @@
 
 Foi feita a paralelização do laço mais externo (`for (int frame = 0; frame < frames; frame++)`). A função resultante é dada abaixo:
 
-~~~java
+~~~cpp
 __global__ void calcularFrame(unsigned char* pic, int width)
 {
     int frame = threadIdx.x;
