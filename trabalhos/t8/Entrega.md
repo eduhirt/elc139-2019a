@@ -1,11 +1,13 @@
-# T7: Avaliação de desempenho de programas MPI
+# T8: Geração de Imagem em Paralelo com CUDA
 
 ### ELC139-2019a - Programação Paralela
 
 **Nome:** Eduardo Rafael Hirt <br/>
 **Matrícula:** 201411329
 
-Implementações: [wavecuda1.cu](wave/wavecuda1.cu), [wavecuda2.cu](wave/wavecuda2.cu)
+**Implementações:** [wavecuda1.cu](wave/wavecuda1.cu), [wavecuda2.cu](wave/wavecuda2.cu) <br/>
+**Máquina:** Tesla T4 <br/>
+**Slides** [slides](slides.pdf)
 
 # Parte 1
 
