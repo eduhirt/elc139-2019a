@@ -28,16 +28,17 @@ __global__ void calcularFrame(unsigned char* pic, int width)
     
 }
 ```
-Após isso, ambos os códigos, (wavecuda1.cu)[/wave/wavecuda1.cu] e (wave.cpp)[/wave/wave.cpp], foram executados nos Notebooks do Google Colab e os seguintes resultados foram obtidos:
+Após isso, ambos os códigos, [wavecuda1.cu](/wave/wavecuda1.cu) e [wave.cpp](/wave/wave.cpp), foram executados nos Notebooks do Google Colab e os seguintes resultados foram obtidos:
 
 **RESULTADOS**
+
 | frame_width, num frames 	| Tempo sequencial 	| Tempo paralelo 	|
 |-------------------------	|------------------	|----------------	|
 | 1024, 100               	| 5.3447 s         	| 0.8369 s       	|
 | 1024, 200               	| 10.2808 s        	| 0.8769 s       	|
 
 
-Para conseguir observar melhor, executei com variações de ambos os parâmetros (grame_width e num_frames). Assim, conseguimos ver que o código paralelizado em GPU é muito mais rápido que o código sequencial executado em um processador.
+Para conseguir observar melhor, executei com variações de ambos os parâmetros (frame_width e num_frames). Assim, conseguimos ver que o código paralelizado em GPU é muito mais rápido que o código sequencial executado em um processador.
 
 **WAVE**
 | frame_width 	| num_frames 	| Tempo de execução 	|
