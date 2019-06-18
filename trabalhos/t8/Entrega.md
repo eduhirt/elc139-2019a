@@ -28,7 +28,7 @@ __global__ void calcularFrame(unsigned char* pic, int width)
     
 }
 ```
-Após isso, ambos os códigos, [wavecuda1.cu](/wave/wavecuda1.cu) e [wave.cpp](/wave/wave.cpp), foram executados nos Notebooks do Google Colab e os seguintes resultados foram obtidos:
+Após isso, ambos os códigos, [wavecuda1.cu](wave/wavecuda1.cu) e [wave.cpp](wave/wave.cpp), foram executados nos Notebooks do Google Colab e os seguintes resultados foram obtidos:
 
 **RESULTADOS**
 
