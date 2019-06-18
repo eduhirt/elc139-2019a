@@ -3,7 +3,7 @@
 #include <math.h>
 #include "wave.h"
 
-__global__ void calcularFrame(unsigned char* pic, int width)
+__global__ void calcularFrame(unsigned char* pic, int width, int frames)
 {
     int index = blockIdx.x * blockDim.x + threadIdx.x;
     int stride = blockDim.x * gridDim.x;
