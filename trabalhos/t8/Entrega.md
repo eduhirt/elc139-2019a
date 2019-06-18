@@ -5,6 +5,8 @@
 **Nome:** Eduardo Rafael Hirt <br/>
 **Matrícula:** 201411329
 
+Implementações: [wavecuda1.cu](wave/wavecuda1.cu), [wavecuda2.cu](wave/wavecuda2.cu)
+
 # Parte 1
 
 Foi feita a paralelização do laço mais externo (`for (int frame = 0; frame < frames; frame++)`). A função resultante é dada abaixo:
@@ -40,31 +42,25 @@ Após isso, ambos os códigos, [wavecuda1.cu](wave/wavecuda1.cu) e [wave.cpp](wa
 
 Para conseguir observar melhor, executei com variações de ambos os parâmetros (frame_width e num_frames). Assim, conseguimos ver que o código paralelizado em GPU é muito mais rápido que o código sequencial executado em um processador.
 
-**WAVE**
-
-| frame_width 	| num_frames 	| Tempo de execução 	|
-|-------------	|------------	|-------------------	|
-| 512         	| 32         	| 0.4635 s          	|
-| 512         	| 64         	| 0.9146 s          	|
-| 512         	| 128        	| 1.6287 s          	|
-| 1024        	| 32         	| 1.6643 s          	|
-| 1024        	| 64         	| 3.2539 s          	|
-| 1024        	| 128        	| 6.6157 s          	|
-| 1024        	| 32         	| 6.5379 s          	|
-| 1024        	| 64         	| 12.9149 s         	|
-| 1024        	| 128        	| 26.0005 s         	|
+| frame_width   | num_frames    | Wave          | Wavecuda1     |
+|-------------  |------------   |-----------    |-----------    |
+| 512           | 32            | 0.4635 s      | 0.4341 s      |
+| 512           | 64            | 0.9146 s      | 0.4438 s      |
+| 512           | 128           | 1.6287 s      | 0.4829 s      |
+| 1024          | 32            | 1.6643 s      | 0.8002 s      |
+| 1024          | 64            | 3.2539 s      | 0.8233 s      |
+| 1024          | 128           | 6.6157 s      | 0.8214 s      |
+| 1024          | 32            | 6.5379 s      | 2.2104 s      |
+| 1024          | 64            | 12.9149 s     | 2.2477 s      |
+| 1024          | 128           | 26.0005 s     | 2.2558 s      |
 
 
-**WAVECUDA1**
+# Referências 
 
-| frame_width 	| num_frames 	| Tempo de execução 	|
-|-------------	|------------	|-------------------	|
-| 512         	| 32         	| 0.4341 s          	|
-| 512         	| 64         	| 0.4438 s          	|
-| 512         	| 128        	| 0.4829 s          	|
-| 1024        	| 32         	| 0.8002 s          	|
-| 1024        	| 64         	| 0.8233 s          	|
-| 1024        	| 128        	| 0.8214 s          	|
-| 1024        	| 32         	| 2.2104 s          	|
-| 1024        	| 64         	| 2.2477 s          	|
-| 1024        	| 128        	| 2.2558 s          	|
+- [CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)  
+  Guia da NVIDIA sobre programação em CUDA.
+  
+- [Experiência com grids, blocks e threads em CUDA](https://colab.research.google.com/drive/1uSTM6C0p4n4aAuvFksplqFxa4NG87rMp)  
+  Notebook no Google Colab com um programa que permite experimentos variando as dimensões de grids e blocos.
+
+- [Unified Memory for CUDA Beginners](https://devblogs.nvidia.com/unified-memory-cuda-beginners/)
