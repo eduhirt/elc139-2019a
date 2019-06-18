@@ -5,17 +5,20 @@
 
 __global__ void calcularFrame(unsigned char* pic, int width)
 {
-    int frame = threadIdx.x;
-    for (int row = 0; row < width; row++) {
-        for (int col = 0; col < width; col++) {
+    int index = blockIdx.x * blockDim.x + threadIdx.x;
+    int stride = blockDim.x * gridDim.x;
+
+    for (int frame = 0; frame < frames; frame++) {
+        for (int row = index; row < width; row += stride) {
+          for (int col = 0; col < width; col++) {
             float fx = col - 1024/2;
             float fy = row - 1024/2;
             float d = sqrtf( fx * fx + fy * fy );
             unsigned char color = (unsigned char) (160.0f + 127.0f *
-                                                cos(d/10.0f - frame/7.0f) /
-                                                (d/50.0f + 1.0f));
-
+                                              cos(d/10.0f - frame/7.0f) /
+                                              (d/50.0f + 1.0f));
             pic[frame * width * width + row * width + col] = (unsigned char) color;
+          }
         }
     }
     
@@ -41,7 +44,10 @@ int main(int argc, char *argv[])
 
     cudaMallocManaged(&pic, frames * width * width * sizeof(char));
 
-    calcularFrame<<<1,frames>>>(pic,width);
+    int blockSize = 512;
+    int numBlocks = (width + blockSize) / blockSize;
+
+    calcularFrame<<<numBlocks,blockSize>>>(pic,width,frames);
 
     // verify result by writing frames to BMP files
     if ((width <= 256) && (frames <= 100)) {

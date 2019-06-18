@@ -5,7 +5,7 @@
 **Nome:** Eduardo Rafael Hirt <br/>
 **Matrícula:** 201411329
 
-Implementações: [wavecuda1.cu](wave/wavecuda1.cu)
+Implementações: [wavecuda1.cu](wave/wavecuda1.cu), [wavecuda2.cu](wave/wavecuda2.cu)
 
 # Parte 1
 
@@ -53,6 +53,25 @@ Para conseguir observar melhor, executei com variações de ambos os parâmetros
 | 1024          | 32            | 6.5379 s      | 2.2104 s      |
 | 1024          | 64            | 12.9149 s     | 2.2477 s      |
 | 1024          | 128           | 26.0005 s     | 2.2558 s      |
+
+
+# Parte 2
+
+Na segunda parte, foi utilizada a estratégia de blocos (baseada no [exemplo](https://devblogs.nvidia.com/unified-memory-cuda-beginners/) para otimizar o código. A implementação se encontra aqui: [wavecuda2.cu](wave/wavecuda2.cu). Os resultados foram os seguintes:
+
+| frame_width   | num_frames    | Wave          | Wavecuda1     | Wavecuda2     |
+|-------------  |------------   |-----------    |-----------    |-----------    |
+| 512           | 32            | 0.4635 s      | 0.4341 s      | 0.4694 s      |
+| 512           | 64            | 0.9146 s      | 0.4438 s      | 0.4598 s      |
+| 512           | 128           | 1.6287 s      | 0.4829 s      | 0.4949 s      |
+| 1024          | 32            | 1.6643 s      | 0.8002 s      | 0.8384 s      |
+| 1024          | 64            | 3.2539 s      | 0.8233 s      | 0.8586 s      |
+| 1024          | 128           | 6.6157 s      | 0.8214 s      | 0.8588 s      |
+| 1024          | 32            | 6.5379 s      | 2.2104 s      | 2.2786 s      |
+| 1024          | 64            | 12.9149 s     | 2.2477 s      | 2.3266 s      |
+| 1024          | 128           | 26.0005 s     | 2.2558 s      | 2.3727 s      |
+
+O tempo de execução aumentou se comparado ao Wavecuda1, imagino que seja pelo fato de o wavecuda1 ser mais paralelizado que o 2, que agrupa mais processamento em cada kernel.
 
 
 # Referências 
